@@ -164,3 +164,13 @@ Nesta aula, começamos a mexer na apresentação dos textos, no alinhamento dele
 - A utilizar o **inline-block**
 
 - A praticar e estilizar o conteúdo principal da nossa página
+
+- - -
+
+## 11. Lidando com bordas
+
+- Através do CSS, aplicar bordas nos elementos.
+
+- Os diferentes tipos de bordas.
+
+- A deixar a borda arredondada.
