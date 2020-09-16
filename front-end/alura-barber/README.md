@@ -120,3 +120,11 @@ Nesta aula, começamos a mexer na apresentação dos textos, no alinhamento dele
 - Que não é recomendado criar estilos usando tags
 
   - O ideal é usarmos classes para tudo
+
+- - -
+
+## 07. Criando uma nova página
+
+- Uma revisão da base de uma página HTML
+
+- Lista HTML não ordenada
