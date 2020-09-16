@@ -128,3 +128,17 @@ Nesta aula, começamos a mexer na apresentação dos textos, no alinhamento dele
 - Uma revisão da base de uma página HTML
 
 - Lista HTML não ordenada
+
+- - -
+
+## 08. Navegação entre páginas
+
+- A criar links para outras páginas, sejam elas do nosso projeto ou páginas externas
+
+- Um reforço aos estilos **inline** e **block**
+
+- Como transformar o texto para ter todas as letras maiúsculas
+
+- Como deixar o texto em negrito com CSS
+
+- Como remover a decoração do texto
