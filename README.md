@@ -108,3 +108,15 @@ Nesta aula, começamos a mexer na apresentação dos textos, no alinhamento dele
 - Divisões de conteúdo, utilizando a tag **div**
 
 - Os comportamentos **inline** e **block**
+
+- - -
+
+## 06. Finalizando página
+
+- O conceito de cabeçalho da página e como criá-lo
+
+- Que o cabeçalho da página deve ter mais destaque
+
+- Que não é recomendado criar estilos usando tags
+
+  - O ideal é usarmos classes para tudo
