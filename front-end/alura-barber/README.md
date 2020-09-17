@@ -200,3 +200,15 @@ Nesta aula, começamos a mexer na apresentação dos textos, no alinhamento dele
   - Quando colocamos uma imagem de fundo em um elemento, o CSS, por padrão, copia e cola a imagem diversas vezes até ocupar todo o espaço do elemento
 
 - A tabela **Unicode**
+
+- - -
+
+## 14. Criando uma página de contatos
+
+- Uma revisão do conteúdo aprendido no treinamento anterior
+
+- Uma introdução ao projeto do treinamento
+
+- A criação da página de contato
+
+- Um pouco sobre os **formulários**
