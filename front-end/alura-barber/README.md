@@ -174,3 +174,17 @@ Nesta aula, começamos a mexer na apresentação dos textos, no alinhamento dele
 - Os diferentes tipos de bordas.
 
 - A deixar a borda arredondada.
+
+- - -
+
+## 12. Pseudo-classes CSS
+
+- Algumas **pseudo-classes** CSS
+
+  - **hover**, quando o usuário passa o cursor sobre o elemento
+
+  - **active**, quando um elemento está sendo ativado pelo usuário
+
+- A mudar a cor do texto e/ou da borda de um elemento, quando o usuário passar o cursor sobre o mesmo
+
+- A mudar a cor da borda de um elemento, quando o mesmo estiver sendo ativado pelo usuário
