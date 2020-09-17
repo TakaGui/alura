@@ -105,6 +105,23 @@ form legend {
   margin: 20px 0;
 }
 
+.submit {
+  width: 40%;
+  padding: 15px 0;
+  background-color: #FFBB00;
+  color: #FFFFFF;
+  font-weight: bold;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 300ms background-color;
+}
+
+.submit:hover {
+  background-color: #e6ac0e;
+}
+
 footer {
   text-align: center;
   background: url("bg.jpg");
