@@ -212,3 +212,24 @@ Nesta aula, começamos a mexer na apresentação dos textos, no alinhamento dele
 - A criação da página de contato
 
 - Um pouco sobre os **formulários**
+
+- - -
+
+## 15. Começando um formulário
+
+- A criar um formulário HTML
+
+  - A tag que o representa é a **form**
+
+- A tag **input**, para a entrada de dados do usuário
+
+- A criar uma etiqueta para o input, com a tag **label**
+
+- A conectar um input com o seu label
+  - Colocamos um id para o input e associamos esse **id** ao atributo **for** do label
+
+- Alguns tipos de input, como **text** e **submit**
+
+- Que label e input por padrão possuem o **display inline**
+
+- A estilizar o nosso formulário
