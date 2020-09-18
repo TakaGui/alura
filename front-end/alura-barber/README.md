@@ -281,3 +281,25 @@ Nesta aula, começamos a mexer na apresentação dos textos, no alinhamento dele
 - A modificar o estilo do ponteiro do mouse, quando passar por cima de determinado elemento, através da propriedade CSS **cursor**
 
 - A realizar transformações nos nossos elementos, como aumentar proporcionalmente a escala de determinado elemento ou rotacioná-lo, através da propriedade CSS **transform**
+
+- - -
+
+## 19. Estrutura de tabelas
+
+- A criar uma tabela HTML
+
+  - A **tag table**, que representa a tabela
+
+  - A **tag tr**, que representa a linha da tabela
+
+  - A **tag td**, que representa a célula da tabela
+
+  - A **tag thead**, que representa o cabeçalho da tabela
+
+  - A **tag tbody**, que representa o corpo da tabela
+
+  - A **tag th**, que representa a célula do cabeçalho da tabela
+
+  - A **tag tfoot**, que representa o rodapé da tabela
+
+- A estilizar a tabela
