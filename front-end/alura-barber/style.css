@@ -115,11 +115,12 @@ form legend {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: 300ms background-color;
+  transition: 300ms all;
 }
 
 .submit:hover {
   background-color: #e6ac0e;
+  transform: scale(1.2);
 }
 
 footer {
