@@ -83,8 +83,7 @@ nav a:hover {
 }
 
 main {
-  width: 940px;
-  margin: 0 auto;
+
 }
 
 form {
@@ -167,6 +166,13 @@ footer {
   clear: left;
 }
 
+.main {
+  padding: 3em 0;
+  background-color: #FEFEFE;
+  width: 940px;
+  margin: 0 auto;
+}
+
 .main p {
   margin-bottom: 1em;
 }
@@ -185,8 +191,14 @@ footer {
   margin: 0 20px 20px 0;
 }
 
+.map-content {
+  width: 940px;
+  margin: 0 auto;
+}
+
 .map {
   padding: 3em 0;
+  background: linear-gradient(#FEFEFE, #888888);
 }
 
 .map p {
@@ -196,6 +208,7 @@ footer {
 
 .benefits {
   padding: 3em 0;
+  background-color: #888888;
 }
 
 .content-benefits {
