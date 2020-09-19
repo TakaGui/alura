@@ -325,3 +325,15 @@ Nesta aula, começamos a mexer na apresentação dos textos, no alinhamento dele
 - Como incorporar um mapa à nossa página
 
 - Como incorporar um vídeo à nossa página
+
+- - -
+
+## 22. Melhorando o CSS
+
+- A melhorar mais ainda a semântica da página principal, com novas divisões, classes, etc
+
+- Novas pseudo-classes
+
+- Como aplicar um background gradiente na página
+
+- Pseudo-elementos
