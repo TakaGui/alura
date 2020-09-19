@@ -383,3 +383,13 @@ Nesta aula, começamos a mexer na apresentação dos textos, no alinhamento dele
 - Como adicionar um sombreamento em volta dos elementos, com a propriedade CSS **box-shadow**
 
 - Como adicionar um sombreamento em textos, com a propriedade CSS **text-shadow**
+
+- - -
+
+## 25. Design responsivo
+
+- **Design responsivo**: como ajustar o estilo da nossa página de acordo com o tamanho da tela do dispositivo que a acesse
+
+  - Meta tag de **Viewport**
+
+  - Media Queries
