@@ -160,6 +160,7 @@ footer {
   text-align: center;
   font-size: 2em;
   margin-bottom: 1em;
+  clear: left;
 }
 
 .main p {
@@ -172,6 +173,12 @@ footer {
 
 .main em {
   font-style: italic;
+}
+
+.tools {
+  width: 120px;
+  float: left;
+  margin: 0 20px 20px 0;
 }
 
 .image_benefits {
