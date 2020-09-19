@@ -337,3 +337,37 @@ Nesta aula, começamos a mexer na apresentação dos textos, no alinhamento dele
 - Como aplicar um background gradiente na página
 
 - Pseudo-elementos
+
+- - -
+
+## 23. Selecionando qualquer coisa
+
+- Seletores avançados CSS
+
+  - Seletor **>**, para acessar os filhos de determinado elemento. Por exemplo, para acessar todos os **p** dentro de **main**:
+  
+    ```css
+    main > p {
+    }
+    ```
+
+  - Seletor **+**, para acessar o primeiro irmão de determinado elemento. Por exemplo, para acessar o primeiro **p** após um **img**:
+
+    ```css
+    img + p {
+    }
+    ```
+
+  - Seletor **~**, para acessar todos os irmãos de determinado elemento. Por exemplo, para acessar todos os **p** após um **img**:
+  
+    ```css
+    img ~ p {
+    }
+    ```
+
+  - Seletor **not**, para acessar os elementos, exceto algum. Por exemplo, para acessar todos os **p** dentro de **main**, exceto o p que tem id missao:
+  
+    ```css
+    main p:not(#missao) {
+    }
+    ```
