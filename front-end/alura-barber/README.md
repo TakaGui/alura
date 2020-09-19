@@ -303,3 +303,15 @@ Nesta aula, começamos a mexer na apresentação dos textos, no alinhamento dele
   - A **tag tfoot**, que representa o rodapé da tabela
 
 - A estilizar a tabela
+
+- - -
+
+### 20. Adaptando a página inicial
+
+- A ajustar a página principal para utilizar os mesmos padrões da página de produtos
+
+- Medidas proporcionais com CSS
+
+- Como funciona a flutuação dos elementos e como modificá-la, com a propriedade **float** do CSS
+
+- Como limpar o **float**, com a propriedade **clear** do CSS
