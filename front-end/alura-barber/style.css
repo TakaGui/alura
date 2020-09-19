@@ -235,6 +235,11 @@ footer {
 
 .image-benefits {
   width: 60%;
+  transition: 400ms;
+}
+
+.image-benefits:hover {
+  opacity: 0.3;
 }
 
 .video {
