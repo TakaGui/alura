@@ -185,6 +185,15 @@ footer {
   margin: 0 20px 20px 0;
 }
 
+.map {
+  padding: 3em 0;
+}
+
+.map p {
+  margin-bottom: 2em;
+  text-align: center;
+}
+
 .image_benefits {
   width: 60%;
 }
