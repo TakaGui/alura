@@ -229,6 +229,10 @@ footer {
   font-weight: bold;
 }
 
+.items:before {
+  content: "⭐";
+}
+
 .image-benefits {
   width: 60%;
 }
