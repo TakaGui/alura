@@ -149,3 +149,31 @@ footer {
   font-size: 13px;
   margin-top: 20px;
 }
+
+/* CSS da página inicial */
+
+.banner {
+  width: 100%;
+}
+
+.main-title {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 1em;
+}
+
+.main p {
+  margin-bottom: 1em;
+}
+
+.main strong {
+  font-weight: bold;
+}
+
+.main em {
+  font-style: italic;
+}
+
+.image_benefits {
+  width: 60%;
+}
