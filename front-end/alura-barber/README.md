@@ -315,3 +315,13 @@ Nesta aula, começamos a mexer na apresentação dos textos, no alinhamento dele
 - Como funciona a flutuação dos elementos e como modificá-la, com a propriedade **float** do CSS
 
 - Como limpar o **float**, com a propriedade **clear** do CSS
+
+- - -
+
+## 21. Conteúdo externo
+
+- A utilizar fontes externas nas nossas páginas
+
+- Como incorporar um mapa à nossa página
+
+- Como incorporar um vídeo à nossa página
