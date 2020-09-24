@@ -29,3 +29,11 @@ function fechandoDialog() {
 
 // Listeners
 document.querySelector('.dialogNewsletter-fechar').addEventListener('click', fechandoDialog);
+
+dialogOverlay.addEventListener('click', fechandoDialog);
+
+document.addEventListener('keyup', function(event) {
+  if (event.keyCode == 27) {
+    fechandoDialog();
+  }
+});
