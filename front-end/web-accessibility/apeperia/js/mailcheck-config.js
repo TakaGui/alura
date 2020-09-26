@@ -12,7 +12,10 @@ campoEmail.addEventListener('blur', function() {
     topLevelDomains: topLevelDomains,       // optional
     secondLevelDomains: secondLevelDomains, // optional
     suggested: function(suggestion) {
-      // callback code
+      sugestao.style.display = 'inline-block';
+      sugestao.textContent = 'Você quis dizer: ' + suggestion.full + ' ?';
+      sugestao.parentNode.classList.add('contatoCampo--erro');
+      campoEmail.classList.add('contatoCampo--validouErro');
     }
   });
 });
