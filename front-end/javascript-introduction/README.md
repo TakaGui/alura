@@ -11,3 +11,13 @@
 - A função que faz busca querySelector()
 
 - Preferir selecionar por #id ou .classe
+
+- - -
+
+## 02. Variáveis e operadores
+
+- O operador lógico de OU ( || )
+
+- O operador lógico de E ( && )
+
+- Busca de elementos
