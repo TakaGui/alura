@@ -19,11 +19,13 @@ pacientes.forEach(paciente => {
   if ((peso <= 0) || (peso >= 1000)) {
     pesoValido = false;
     tdImc.textContent = 'Peso inválido';
+    paciente.classList.add('paciente-invalido');
   }
   
   if ((altura <= 0) || (altura >= 3.00)) {
     alturaValida = false;
     tdImc.textContent = 'Altura inválida';
+    paciente.classList.add('paciente-invalido');
   }
   
   if (pesoValido && alturaValida) {
