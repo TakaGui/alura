@@ -21,3 +21,17 @@
 - O operador lógico de E ( && )
 
 - Busca de elementos
+
+- - -
+
+## 03. Arrays, Loop e Estilos
+
+- Como selecionar diversos elementos com a função **querySelectorAll()**
+
+- Relembramos um método clássico de iteração com o **for**
+
+- Vimos como manipular estilos com a propriedade **.style**
+
+- Vimos que devemos utilizar camelCase quando queremos modificar uma propriedade que tenha duas palavras, como a **background-color**
+
+- A boa prática de não alterar o estilo diretamente no Javascript e sim modificar as classes dos elementos com a propriedade **.classList**
