@@ -35,3 +35,19 @@
 - Vimos que devemos utilizar camelCase quando queremos modificar uma propriedade que tenha duas palavras, como a **background-color**
 
 - A boa prática de não alterar o estilo diretamente no Javascript e sim modificar as classes dos elementos com a propriedade **.classList**
+
+- - -
+
+## 04. Eventos, Formulários e Criando Elementos
+
+- A diferença entre as funções nomeadas e as funções anônimas
+
+- A escutar eventos do browser com a função **addEventListener()**
+
+- Que a função criadora de elementos é **.createElement()**
+
+- A pegar o valor de um input por meio da propriedade **.value**
+
+- A acessar os input de um form por meio da propriedade **name**.
+
+- A adicionar elementos na página e dentro de outros elementos com a função **appendChild()**
