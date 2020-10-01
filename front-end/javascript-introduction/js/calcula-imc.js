@@ -28,9 +28,16 @@ pacientes.forEach(paciente => {
   }
   
   if (pesoValido && alturaValida) {
-    var imc = peso / (altura * altura);
+    var imc = calculaImc(peso, altura);
   
-    tdImc.textContent = imc.toFixed(2);
+    tdImc.textContent = imc;
   }
 });
 
+function calculaImc(peso, altura) {
+  var imc = 0;
+
+  imc = peso / (altura * altura);
+
+  return imc.toFixed(2);
+}
