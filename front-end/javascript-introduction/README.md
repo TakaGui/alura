@@ -51,3 +51,15 @@
 - A acessar os input de um form por meio da propriedade **name**.
 
 - A adicionar elementos na página e dentro de outros elementos com a função **appendChild()**
+
+- - -
+
+## 05. Boas práticas com JavaScript
+
+- Dividir o código, separando por funcionalidades do sistema
+
+- Os objetos em Javascript
+
+- A quebrar funções grandes em funções menores ,com cada uma com sua responsabilidade
+
+- A função **form.reset()** para limpar o formulário
