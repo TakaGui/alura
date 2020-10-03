@@ -63,3 +63,19 @@
 - A quebrar funções grandes em funções menores ,com cada uma com sua responsabilidade
 
 - A função **form.reset()** para limpar o formulário
+
+- - -
+
+## 06. Validação de Formulários
+
+- Mais organização de código, exportando as funções de validação.
+
+- O operador de negação NOT (!)
+
+- Como validar um formulário
+
+- A função **push** para colocar elementos dentro de um array
+
+- A propriedade **innerHTML** dos elementos, que foi usada para apagar os itens da **ul**
+
+- O método forEach para percorrer arrays
