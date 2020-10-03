@@ -79,3 +79,15 @@
 - A propriedade **innerHTML** dos elementos, que foi usada para apagar os itens da **ul**
 
 - O método forEach para percorrer arrays
+
+- - -
+
+## 07. Remoção, Delegação e Animação
+
+- O novo evento de **dblclick**
+
+- Como os eventos propagam atráves da página
+
+- A delegação de eventos
+
+- Como animar uma remoção com o **setTimeout**
