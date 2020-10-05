@@ -91,3 +91,15 @@
 - A delegação de eventos
 
 - Como animar uma remoção com o **setTimeout**
+
+- - -
+
+## 08. Filtrando uma tabela
+
+- O novo evento de input
+
+- O truque de deixar invisível adicionando uma classe com display:none
+
+- Como realizar uma busca, escondendo todos os elementos e mostrando apenas aqueles que nos interessam
+
+- Como buscar por apenas um pedaço de uma palavra com as Expressões Regulares em Javascript
