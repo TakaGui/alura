@@ -103,3 +103,23 @@
 - Como realizar uma busca, escondendo todos os elementos e mostrando apenas aqueles que nos interessam
 
 - Como buscar por apenas um pedaço de uma palavra com as Expressões Regulares em Javascript
+
+- - -
+
+## 09. Buscando pacientes com AJAX
+
+- Como fazer uma requisição assíncrona com o Javascript
+
+- O objeto **XMLHttpRequest**
+
+- Como configurar e enviar uma requisição
+
+- O evento de **load**
+
+- O que é a técnica **AJAX**.
+
+- O formato **JSON**
+
+- Como converter JSON para um objeto Javascript com a função **JSON.parse()**
+
+- Como lidar com erros durante o **AJAX**
