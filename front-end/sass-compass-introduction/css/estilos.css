@@ -1,4 +1,3 @@
-/** Geral **/
 body {
   font-family: "Roboto Slab", serif; }
 
@@ -20,7 +19,6 @@ body {
 h2 {
   margin-top: 0; }
 
-/** Header **/
 header {
   border-top: 5px solid #c24e4b;
   background: rgba(30, 44, 53, 0.8);
@@ -48,7 +46,6 @@ header .container {
     .menu-principal a:hover {
       text-decoration: underline; }
 
-/** Destaque **/
 .destaque {
   background: url(../imagens/destaque.jpg) center bottom repeat-x;
   -webkit-background-size: cover;
@@ -125,7 +122,6 @@ header .container {
 .plataformas li:nth-child(4) {
   background-image: url(../imagens/logo-blackberry.png); }
 
-/** Planos **/
 .planos {
   background: #1e2c35; }
 
@@ -193,7 +189,6 @@ header .container {
 .icone-x {
   background-position: -33px -5px; }
 
-/** Blog **/
 .blog {
   display: block;
   position: relative; }
