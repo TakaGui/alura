@@ -1,3 +1,10 @@
-const negotiation = new Negotiation(new Date(), 2, 100);
+const negotiationController = new NegotiationController();
 
-console.log(negotiation.amount);
+document
+  .querySelector('.form')
+  .addEventListener(
+    'submit',
+    negotiationController
+      .submitForm
+      .bind(negotiationController)
+  );
