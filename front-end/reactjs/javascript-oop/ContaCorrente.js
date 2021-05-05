@@ -1,5 +1,7 @@
 export class ContaCorrente {
+  cliente;
   agencia;
+
   #saldo = 0;
 
   depositar(valor) {
@@ -24,5 +26,10 @@ export class ContaCorrente {
 
   mostrarSaldo() {
     return this.#saldo;
+  }
+
+  transferir(valor, conta) {
+    const valorSacado = this.sacar(valor);
+    conta.depositar(valorSacado);
   }
 }
