@@ -27,3 +27,5 @@ console.log('transferência fim')
 
 console.log(`saldo ${contaCorrenteTaka.cliente.nome}`, contaCorrenteTaka.saldo);
 console.log(`saldo ${contaCorrenteKaren.cliente.nome}`, contaCorrenteKaren.saldo);
+
+console.log('Número de contas cadastradas', ContaCorrente.numeroDeContas);
