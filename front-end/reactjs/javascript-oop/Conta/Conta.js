@@ -1,4 +1,5 @@
-import { Cliente } from './Cliente.js';
+import { Cliente } from '../Cliente.js';
+
 export class Conta {
   _saldo;
   #agencia;
