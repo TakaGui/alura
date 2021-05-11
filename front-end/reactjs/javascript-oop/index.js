@@ -1,6 +1,7 @@
 import { Cliente } from './Cliente.js';
 import { ContaCorrente } from './ContaCorrente.js';
 import { ContaPoupanca } from './ContaPoupanca.js';
+import { ContaSalario } from './ContaSalario.js';
 
 const cliente1 = new Cliente('Taka', 11122233309);
 const cliente2 = new Cliente('Karen', 44455566609);
@@ -32,3 +33,9 @@ console.log(`saldo ${contaCorrenteKaren.cliente.nome}`, contaCorrenteKaren.saldo
 console.log('Número de contas cadastradas', ContaCorrente.numeroDeContas);
 
 const contaPoupanca = new ContaPoupanca(50, agencia, cliente1);
+const contaSalario = new ContaSalario(agencia, cliente1);
+
+contaSalario.depositar(100);
+contaSalario.sacar(10);
+
+console.log(contaSalario);
