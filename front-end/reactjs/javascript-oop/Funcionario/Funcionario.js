@@ -1,4 +1,6 @@
 export class Funcionario {
+  #senha;
+
   constructor(nome, salario, cpf) {
     if (this.constructor === Funcionario) {
       throw new Error(
@@ -11,5 +13,14 @@ export class Funcionario {
     this._cpf = cpf;
 
     this._bonificacao = 1;
+    this.#senha;
+  }
+
+  get senha() {
+    return this.#senha;
+  }
+
+  cadastrarSenha(senha) {
+    this.#senha = senha;
   }
 }
