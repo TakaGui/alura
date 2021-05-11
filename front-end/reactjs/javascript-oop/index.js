@@ -9,8 +9,8 @@ import { Diretor } from './Funcionario/Diretor.js';
 
 import { SistemaAutenticacao } from './SistemaAutenticacao.js';
 
-const cliente1 = new Cliente('Taka', 11122233309);
-const cliente2 = new Cliente('Karen', 44455566609);
+const cliente1 = new Cliente('Taka', 11122233309, '123456');
+const cliente2 = new Cliente('Karen', 44455566609, '123456');
 
 const agencia = 1001;
 
@@ -53,6 +53,8 @@ diretor.cadastrarSenha('123456789');
 
 const gerenteEstaLogado = SistemaAutenticacao.login(gerente, '123456789');
 const diretorEstaLogado = SistemaAutenticacao.login(diretor, '123456789');
+const cliente1EstaLogado = SistemaAutenticacao.login(cliente1, '123456');
 
 console.log('gerente logado', gerenteEstaLogado);
 console.log('diretor logado', diretorEstaLogado);
+console.log('cliente1 logado', cliente1EstaLogado);

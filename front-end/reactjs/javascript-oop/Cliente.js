@@ -11,4 +11,8 @@ export class Cliente {
   get cpf() {
     return this.#cpf;
   }
+
+  autenticar(senha) {
+    return this.#senha === senha;
+  }
 }
