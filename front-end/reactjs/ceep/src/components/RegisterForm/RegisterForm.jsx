@@ -3,30 +3,49 @@ import { Component } from 'react';
 import './styles.css';
 
 export class RegisterForm extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.title = '';
+    this.text = '';
   }
 
-  handleChangeTitle(event) {
+  _handleChangeTitle(event) {
+    event.stopPropagation();
+
     this.title = event.target.value;
-    console.log(this.title);
+  }
+
+  _handleChangeText(event) {
+    event.stopPropagation();
+
+    this.text = event.target.value;
+  }
+
+  _createNote(event) {
+    event.preventDefault();
+    event.stopPropagation();
+
+    this.props.createNote(this.title, this.text);
   }
 
   render() {
     return (
-      <form className="register-form">
+      <form
+        className="register-form"
+        onSubmit={this._createNote.bind(this)}
+      >
         <input
           className="register-form_input"
           type="text"
           placeholder="Título"
-          onChange={this.handleChangeTitle.bind(this)}
+          onChange={this._handleChangeTitle.bind(this)}
         />
 
         <textarea
           className="register-form_input"
           rows="15"
           placeholder="Escreva sua nota..."
+          onChange = {this._handleChangeText.bind(this)}
         />
 
         <button
