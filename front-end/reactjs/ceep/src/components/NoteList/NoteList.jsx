@@ -9,11 +9,11 @@ export class NoteList extends Component {
     return (
       <ul className="note-list">
         {
-          Array.of('Trabalho', 'Trabalho', 'Estudo')
-            .map((category, index) => {
+          this.props.notes
+            .map((note, index) => {
               return (
                 <li className="note-list_item" key={index}>
-                  <NoteCard />
+                  <NoteCard title={note.title} text={note.text} />
                 </li>
               );
             })
