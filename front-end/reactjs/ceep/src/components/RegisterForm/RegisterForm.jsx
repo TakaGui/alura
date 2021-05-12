@@ -3,6 +3,16 @@ import { Component } from 'react';
 import './styles.css';
 
 export class RegisterForm extends Component {
+  constructor() {
+    super();
+    this.title = '';
+  }
+
+  handleChangeTitle(event) {
+    this.title = event.target.value;
+    console.log(this.title);
+  }
+
   render() {
     return (
       <form className="register-form">
@@ -10,6 +20,7 @@ export class RegisterForm extends Component {
           className="register-form_input"
           type="text"
           placeholder="Título"
+          onChange={this.handleChangeTitle.bind(this)}
         />
 
         <textarea
