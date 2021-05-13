@@ -50,7 +50,10 @@ class App extends Component {
   render() {
     return (
       <section className="container">
-        <RegisterForm createNote={this.createNote.bind(this)} />
+        <RegisterForm
+          categories={this.state.categories}
+          createNote={this.createNote.bind(this)}
+        />
 
         <main className="content">
           <CategoryList

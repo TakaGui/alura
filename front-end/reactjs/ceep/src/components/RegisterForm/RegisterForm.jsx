@@ -34,6 +34,15 @@ export class RegisterForm extends Component {
         className="register-form"
         onSubmit={this._createNote.bind(this)}
       >
+        <select className="form-cadastro_input">
+          {
+            this.props.categories.map((category, index) => {
+              return (
+                <option key={index}>{category}</option>
+              )
+            })
+          }
+        </select>
         <input
           className="register-form_input"
           type="text"
