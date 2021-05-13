@@ -3,8 +3,8 @@ import { Component } from 'react';
 import { NoteList } from './components/NoteList';
 import { RegisterForm } from './components/RegisterForm';
 
-import './assets/App.css';
-import './assets/index.css';
+import './assets/style/App.css';
+import './assets/style/index.css';
 
 class App extends Component {
   constructor() {
@@ -26,11 +26,17 @@ class App extends Component {
     this.setState(newState);
   }
 
+  deleteNote(index) {
+    let arrayNotes = this.state.notes;
+    arrayNotes.splice(index,1);
+    this.setState({ notes: arrayNotes });
+  }
+
   render() {
     return (
       <section className="content">
         <RegisterForm createNote={this.createNote.bind(this)} />
-        <NoteList notes={this.state.notes}/>
+        <NoteList deleteNote={this.deleteNote.bind(this)} notes={this.state.notes}/>
       </section>
     );
   }

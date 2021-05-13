@@ -13,7 +13,12 @@ export class NoteList extends Component {
             .map((note, index) => {
               return (
                 <li className="note-list_item" key={index}>
-                  <NoteCard title={note.title} text={note.text} />
+                  <NoteCard
+                    title={note.title}
+                    text={note.text}
+                    index={index}
+                    deleteNote={this.props.deleteNote}
+                  />
                 </li>
               );
             })
