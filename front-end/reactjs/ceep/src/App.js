@@ -1,7 +1,8 @@
 import { Component } from 'react';
 
-import { NoteList } from './components/NoteList';
 import { RegisterForm } from './components/RegisterForm';
+import { CategoryList } from './components/CategoryList';
+import { NoteList } from './components/NoteList';
 
 import './assets/style/App.css';
 import './assets/style/index.css';
@@ -12,6 +13,7 @@ class App extends Component {
 
     this.state = {
       notes: [],
+      categories: [],
     };
   }
 
@@ -20,6 +22,7 @@ class App extends Component {
     const setNotes = [...this.state.notes, newNote];
 
     const newState = {
+      ...this.state,
       notes: setNotes,
     }
 
@@ -32,11 +35,34 @@ class App extends Component {
     this.setState({ notes: arrayNotes });
   }
 
+  createCategory(category) {
+    const newCategory = category;
+    const setCategory = [...this.state.categories, newCategory];
+
+    const newState = {
+      ...this.state,
+      categories: setCategory,
+    }
+
+    this.setState(newState);
+  }
+
   render() {
     return (
-      <section className="content">
+      <section className="container">
         <RegisterForm createNote={this.createNote.bind(this)} />
-        <NoteList deleteNote={this.deleteNote.bind(this)} notes={this.state.notes}/>
+
+        <main className="content">
+          <CategoryList
+            createCategory={this.createCategory.bind(this)}
+            categories={this.state.categories}
+          />
+
+          <NoteList
+            deleteNote={this.deleteNote.bind(this)}
+            notes={this.state.notes}
+          />
+        </main>
       </section>
     );
   }

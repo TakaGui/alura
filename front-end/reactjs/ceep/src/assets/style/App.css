@@ -1,5 +1,9 @@
-.content {
+.container {
   display: flex;
+}
+
+.content {
+  flex-grow: 3;
 }
 
 :root {
