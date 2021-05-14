@@ -10,6 +10,10 @@ export class NoteListData {
     this._observable.push(func);
   }
 
+  unsubscribe(func) {
+    this._observable = this._observable.filter(f => f !== func);
+  }
+
   notify() {
     this._observable.forEach(func => {
       func(this.notes);

@@ -11,10 +11,16 @@ export class NoteList extends Component {
     this.state = {
       notes: [],
     };
+
+    this._newNotes = this._newNotes.bind(this);
   }
 
   componentDidMount() {
-    this.props.notes.subscribe(this._newNotes.bind(this));
+    this.props.notes.subscribe(this._newNotes);
+  }
+
+  componentWillUnmount() {
+    this.props.notes.unsubscribe(this._newNotes)
   }
 
   _newNotes(notes) {
