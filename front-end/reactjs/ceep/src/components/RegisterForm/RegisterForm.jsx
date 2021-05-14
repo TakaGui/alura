@@ -8,6 +8,18 @@ export class RegisterForm extends Component {
     this.category = 'Sem categoria';
     this.title = '';
     this.text = '';
+
+    this.state = {
+      categories: [],
+    };
+  }
+
+  componentDidMount() {
+    this.props.categories.subscribe(this._newCategories.bind(this));
+  }
+
+  _newCategories(categories) {
+    this.setState({ ...this.state, categories });
   }
 
   _handleChangeCategory(event) {
@@ -51,7 +63,7 @@ export class RegisterForm extends Component {
         >
           <option>Sem Categoria</option>
           {
-            this.props.categories.map((category, index) => {
+            this.state.categories.map((category, index) => {
               return (
                 <option key={index}>{category}</option>
               )

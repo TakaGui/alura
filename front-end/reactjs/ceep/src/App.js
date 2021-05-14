@@ -4,6 +4,9 @@ import { RegisterForm } from './components/RegisterForm';
 import { CategoryList } from './components/CategoryList';
 import { NoteList } from './components/NoteList';
 
+import { CategoriesData } from './data/CategoriesData';
+import { NoteListData } from './data/NoteListData';
+
 import './assets/style/App.css';
 import './assets/style/index.css';
 
@@ -11,59 +14,27 @@ class App extends Component {
   constructor() {
     super();
 
-    this.state = {
-      notes: [],
-      categories: [],
-    };
-  }
-
-  createNote(title, text, category) {
-    const newNote = {title, text, category};
-    const setNotes = [...this.state.notes, newNote];
-
-    const newState = {
-      ...this.state,
-      notes: setNotes,
-    }
-
-    this.setState(newState);
-  }
-
-  deleteNote(index) {
-    let arrayNotes = this.state.notes;
-    arrayNotes.splice(index,1);
-    this.setState({ notes: arrayNotes });
-  }
-
-  createCategory(category) {
-    const newCategory = category;
-    const setCategory = [...this.state.categories, newCategory];
-
-    const newState = {
-      ...this.state,
-      categories: setCategory,
-    }
-
-    this.setState(newState);
+    this.categories = new CategoriesData();
+    this.notes = new NoteListData();
   }
 
   render() {
     return (
       <section className="container">
         <RegisterForm
-          categories={this.state.categories}
-          createNote={this.createNote.bind(this)}
+          categories={this.categories}
+          createNote={this.notes.createNote.bind(this.notes)}
         />
 
         <main className="content">
           <CategoryList
-            createCategory={this.createCategory.bind(this)}
-            categories={this.state.categories}
+            categories={this.categories}
+            createCategory={this.categories.createCategory.bind(this.categories)}
           />
 
           <NoteList
-            deleteNote={this.deleteNote.bind(this)}
-            notes={this.state.notes}
+            notes={this.notes}
+            deleteNote={this.notes.deleteNote.bind(this.notes)}
           />
         </main>
       </section>

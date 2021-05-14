@@ -3,6 +3,22 @@ import { Component } from 'react';
 import './styles.css';
 
 export class CategoryList extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      categories: [],
+    };
+  }
+
+  componentDidMount() {
+    this.props.categories.subscribe(this._newCategories.bind(this));
+  }
+
+  _newCategories(categories) {
+    this.setState({ ...this.state, categories });
+  }
+
   _handleInputEvent(event) {
     // Enter
     if (event.keyCode === 13) {
@@ -16,7 +32,7 @@ export class CategoryList extends Component {
       <section className="category-list">
         <ul className="category-list_list">
           {
-            this.props.categories.map((category, index) => {
+            this.state.categories.map((category, index) => {
               return (
                 <li key={index} className="category-list_item">
                   {category}
