@@ -5,8 +5,15 @@ import './styles.css';
 export class RegisterForm extends Component {
   constructor(props) {
     super(props);
+    this.category = 'Sem categoria';
     this.title = '';
     this.text = '';
+  }
+
+  _handleChangeCategory(event) {
+    event.stopPropagation();
+
+    this.category = event.target.value;
   }
 
   _handleChangeTitle(event) {
@@ -25,7 +32,11 @@ export class RegisterForm extends Component {
     event.preventDefault();
     event.stopPropagation();
 
-    this.props.createNote(this.title, this.text);
+    this.props.createNote(
+      this.title,
+      this.text,
+      this.category,
+    );
   }
 
   render() {
@@ -34,7 +45,11 @@ export class RegisterForm extends Component {
         className="register-form"
         onSubmit={this._createNote.bind(this)}
       >
-        <select className="form-cadastro_input">
+        <select
+          className="form-cadastro_input"
+          onChange={this._handleChangeCategory.bind(this)}
+        >
+          <option>Sem Categoria</option>
           {
             this.props.categories.map((category, index) => {
               return (
@@ -43,6 +58,7 @@ export class RegisterForm extends Component {
             })
           }
         </select>
+
         <input
           className="register-form_input"
           type="text"

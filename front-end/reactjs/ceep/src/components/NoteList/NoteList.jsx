@@ -16,6 +16,7 @@ export class NoteList extends Component {
                   <NoteCard
                     title={note.title}
                     text={note.text}
+                    category={note.category}
                     index={index}
                     deleteNote={this.props.deleteNote}
                   />
