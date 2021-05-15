@@ -1,13 +1,28 @@
-import './App.css';
+import {
+  Container,
+  Typography,
+} from '@material-ui/core';
 
 import { RegisterForm } from './components/RegisterForm';
 
+import 'fontsource-roboto';
+import './App.css';
+
 function App() {
   return (
-    <>
-      <h1>Formulário de cadastro</h1>
+    <Container
+      component="article"
+      maxWidth="sm"
+    >
+      <Typography
+        variant="h3"
+        component="h1"
+        align="center"
+      >
+        Formulário de cadastro
+      </Typography>
       <RegisterForm />
-    </>
+    </Container>
   );
 }
 

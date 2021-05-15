@@ -1,5 +1,9 @@
-import Button from '@material-ui/core/Button';
-import TextField from '@material-ui/core/TextField';
+import {
+  TextField,
+  FormControlLabel,
+  Switch,
+  Button,
+} from '@material-ui/core';
 
 export function RegisterForm() {
   return (
@@ -10,6 +14,7 @@ export function RegisterForm() {
         variant="outlined"
         required
         fullWidth
+        margin="normal"
       />
 
       <TextField
@@ -18,6 +23,7 @@ export function RegisterForm() {
         variant="outlined"
         required
         fullWidth
+        margin="normal"
       />
 
       <TextField
@@ -26,6 +32,29 @@ export function RegisterForm() {
         variant="outlined"
         required
         fullWidth
+        margin="normal"
+      />
+
+      <FormControlLabel
+        label="Promoções"
+        control={
+          <Switch
+            name="promotion"
+            defaultChecked
+            color="primary"
+          />
+        }
+      />
+
+      <FormControlLabel
+        label="Novidades"
+        control={
+          <Switch
+            name="news"
+            defaultChecked
+            color="primary"
+          />
+        }
       />
 
       <Button
