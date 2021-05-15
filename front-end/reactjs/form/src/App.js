@@ -8,7 +8,12 @@ import { RegisterForm } from './components/RegisterForm';
 import 'fontsource-roboto';
 import './App.css';
 
+
 function App() {
+  function onSubmitForm(data) {
+    console.log(data);
+  }
+
   return (
     <Container
       component="article"
@@ -21,7 +26,7 @@ function App() {
       >
         Formulário de cadastro
       </Typography>
-      <RegisterForm />
+      <RegisterForm onSubmitForm={onSubmitForm}/>
     </Container>
   );
 }

@@ -7,7 +7,9 @@ import {
   Button,
 } from '@material-ui/core';
 
-export function RegisterForm() {
+export function RegisterForm({
+  onSubmitForm,
+}) {
   const [name, setName] = useState('');
   const [lastName, setLastName] = useState('');
   const [cpf, setCpf] = useState('');
@@ -18,13 +20,14 @@ export function RegisterForm() {
     <form
       onSubmit={(event) => {
         event.preventDefault();
-        console.log(
+
+        onSubmitForm({
           name,
           lastName,
           cpf,
           promotion,
           news,
-        );
+        });
       }}
     >
       <TextField
