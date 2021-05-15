@@ -1,22 +1,32 @@
 import Button from '@material-ui/core/Button';
+import TextField from '@material-ui/core/TextField';
 
 export function RegisterForm() {
   return (
     <form action="">
-      <label htmlFor="">Nome</label>
-      <input type="text" />
+      <TextField
+        id="name"
+        label="Nome"
+        variant="outlined"
+        required
+        fullWidth
+      />
 
-      <label htmlFor="">Sobrenome</label>
-      <input type="text" />
+      <TextField
+        id="lastname"
+        label="Sobrenome"
+        variant="outlined"
+        required
+        fullWidth
+      />
 
-      <label htmlFor="">CPF</label>
-      <input type="text" />
-
-      <label htmlFor="">Promoções</label>
-      <input type="checkbox" />
-
-      <label htmlFor="">Novidades</label>
-      <input type="checkbox" />
+      <TextField
+        id="cpf"
+        label="CPF"
+        variant="outlined"
+        required
+        fullWidth
+      />
 
       <Button
         type="submit"
