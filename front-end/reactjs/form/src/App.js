@@ -14,6 +14,20 @@ function App() {
     console.log(data);
   }
 
+  function validCpf(cpf) {
+    if (cpf.length !== 11) {
+      return {
+        valid: false,
+        text: 'CPF deve ter 11 dígitos.',
+      };
+    } else {
+      return {
+        valid: true,
+        text: '',
+      };
+    }
+  }
+
   return (
     <Container
       component="article"
@@ -26,7 +40,10 @@ function App() {
       >
         Formulário de cadastro
       </Typography>
-      <RegisterForm onSubmitForm={onSubmitForm}/>
+      <RegisterForm
+        onSubmitForm={onSubmitForm}
+        validCpf={validCpf}
+      />
     </Container>
   );
 }

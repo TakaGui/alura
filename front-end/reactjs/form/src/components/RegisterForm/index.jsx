@@ -9,12 +9,19 @@ import {
 
 export function RegisterForm({
   onSubmitForm,
+  validCpf,
 }) {
   const [name, setName] = useState('');
   const [lastName, setLastName] = useState('');
   const [cpf, setCpf] = useState('');
   const [promotion, setPromotion] = useState(true);
   const [news, setNews] = useState(true);
+  const [errors, setErrors] = useState({
+    cpf: {
+      valid: true,
+      text: '',
+    },
+  });
 
   return (
     <form
@@ -67,6 +74,12 @@ export function RegisterForm({
         onChange={(event) => {
           setCpf(event.target.value);
         }}
+        onBlur={(event) => {
+          const isValidCpf = validCpf(cpf);
+          setErrors({ cpf: isValidCpf });
+        }}
+        error={!errors.cpf.valid}
+        helperText={errors.cpf.text}
       />
 
       <FormControlLabel
