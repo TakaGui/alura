@@ -10,11 +10,11 @@ import './App.css';
 
 
 function App() {
-  function onSubmitForm(data) {
+  const onSubmitForm = (data) => {
     console.log(data);
   }
 
-  function validCpf(cpf) {
+  const validCpf = (cpf) => {
     if (cpf.length !== 11) {
       return {
         valid: false,

@@ -1,5 +1,7 @@
 import { PersonalData } from './PersonalData';
 import { UserData } from './UserData';
+import { AddressData } from './AddressData';
+
 export function RegisterForm({
   onSubmitForm,
   validCpf,
@@ -11,6 +13,7 @@ export function RegisterForm({
         validCpf={validCpf}
       />
       <UserData />
+      <AddressData />
     </>
   );
 }
