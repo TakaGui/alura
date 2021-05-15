@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 import {
   TextField,
   FormControlLabel,
@@ -6,8 +8,17 @@ import {
 } from '@material-ui/core';
 
 export function RegisterForm() {
+  const [name, setName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [cpf, setCpf] = useState('');
+
   return (
-    <form action="">
+    <form
+      onSubmit={(event) => {
+        event.preventDefault();
+        console.log(name, lastName, cpf);
+      }}
+    >
       <TextField
         id="name"
         label="Nome"
@@ -15,6 +26,10 @@ export function RegisterForm() {
         required
         fullWidth
         margin="normal"
+        value={name}
+        onChange={(event) => {
+          setName(event.target.value);
+        }}
       />
 
       <TextField
@@ -24,6 +39,10 @@ export function RegisterForm() {
         required
         fullWidth
         margin="normal"
+        value={lastName}
+        onChange={(event) => {
+          setLastName(event.target.value);
+        }}
       />
 
       <TextField
@@ -33,6 +52,10 @@ export function RegisterForm() {
         required
         fullWidth
         margin="normal"
+        value={cpf}
+        onChange={(event) => {
+          setCpf(event.target.value);
+        }}
       />
 
       <FormControlLabel
