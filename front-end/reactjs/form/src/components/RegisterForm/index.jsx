@@ -11,12 +11,20 @@ export function RegisterForm() {
   const [name, setName] = useState('');
   const [lastName, setLastName] = useState('');
   const [cpf, setCpf] = useState('');
+  const [promotion, setPromotion] = useState(true);
+  const [news, setNews] = useState(true);
 
   return (
     <form
       onSubmit={(event) => {
         event.preventDefault();
-        console.log(name, lastName, cpf);
+        console.log(
+          name,
+          lastName,
+          cpf,
+          promotion,
+          news,
+        );
       }}
     >
       <TextField
@@ -63,8 +71,11 @@ export function RegisterForm() {
         control={
           <Switch
             name="promotion"
-            defaultChecked
             color="primary"
+            checked={promotion}
+            onChange={(event) => {
+              setPromotion(event.target.checked);
+            }}
           />
         }
       />
@@ -74,8 +85,11 @@ export function RegisterForm() {
         control={
           <Switch
             name="news"
-            defaultChecked
             color="primary"
+            checked={news}
+            onChange={(event) => {
+              setNews(event.target.checked);
+            }}
           />
         }
       />
