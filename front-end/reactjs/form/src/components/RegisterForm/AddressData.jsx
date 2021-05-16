@@ -17,6 +17,8 @@ export function AddressData({
   return (
     <form
       onSubmit={(event) => {
+        event.preventDefault();
+
         onSubmitForm({
           cep,
           address,

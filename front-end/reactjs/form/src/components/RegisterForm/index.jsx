@@ -1,4 +1,7 @@
-import { useState } from 'react';
+import {
+  useState,
+  useEffect,
+} from 'react';
 
 import { UserData } from './UserData';
 import { PersonalData } from './PersonalData';
@@ -9,21 +12,31 @@ export function RegisterForm({
   validCpf,
 }) {
   const [stage, setStage] = useState(0);
+  const [formData, setFormData] = useState({});
+
+  useEffect(() => {
+    console.log(formData);
+  });
 
   const nextStage = () => {
     setStage(stage + 1);
   }
 
+  function getData(data) {
+    setFormData({...formData, ...data});
+    nextStage();
+  }
+
   const forms = [
     <UserData
-      onSubmitForm={nextStage}
+      onSubmitForm={getData}
     />,
     <PersonalData
-      onSubmitForm={nextStage}
+      onSubmitForm={getData}
       validCpf={validCpf}
     />,
     <AddressData
-      onSubmitForm={onSubmitForm}
+      onSubmitForm={getData}
     />,
   ];
 
