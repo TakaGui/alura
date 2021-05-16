@@ -9,21 +9,33 @@ export function RegisterForm({
   onSubmitForm,
   validCpf,
 }) {
-  const [stage, setStage] = useState(1);
+  const [stage, setStage] = useState(0);
+
+  const nextStage = () => {
+    setStage(stage + 1);
+  }
 
   const currentForm = (stage) => {
     switch (stage) {
       case 0:
-        return (<UserData />);
+        return (
+          <UserData
+            onSubmitForm={nextStage}
+          />
+        );
       case 1:
         return (
           <PersonalData
-            onSubmitForm={onSubmitForm}
+            onSubmitForm={nextStage}
             validCpf={validCpf}
           />
         );
       case 2:
-        return (<AddressData />);
+        return (
+          <AddressData
+            onSubmitForm={onSubmitForm}
+          />
+        );
       default:
         return (
           <Typography
