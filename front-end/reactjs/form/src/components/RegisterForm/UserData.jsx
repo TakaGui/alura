@@ -8,25 +8,53 @@ import {
 } from '@material-ui/core';
 
 export function UserData({
-  onSubmitForm
+  onSubmitForm,
+  validations,
 }) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [errors, setErrors] = useState({
+    password: {
+      valid: true,
+      text: '',
+    },
+  });
+
+  function validFields(event) {
+    const { name, value } = event.target;
+    const isValid = validations[name](value);
+    const newState = { ...errors };
+    newState[name] = isValid;
+    setErrors(newState);
+  }
+
+  function canSubmit() {
+    for (let field in errors) {
+      if (!errors[field].valid) {
+        return false;
+      }
+    }
+
+    return true;
+  }
 
   return (
     <form
       onSubmit={(event) => {
         event.preventDefault();
 
-        onSubmitForm({
-          email,
-          password,
-        });
+        if (canSubmit()) {
+          onSubmitForm({
+            email,
+            password,
+          });
+        }
       }}
     >
       <TextField
         id="email"
         label="Email"
+        name="email"
         type="email"
         variant="outlined"
         margin="normal"
@@ -41,6 +69,7 @@ export function UserData({
       <TextField
         id="password"
         label="Senha"
+        name="password"
         type="password"
         variant="outlined"
         margin="normal"
@@ -50,6 +79,9 @@ export function UserData({
         onChange={(event) => {
           setPassword(event.target.value);
         }}
+        onBlur={validFields}
+        error={!errors.password.valid}
+        helperText={errors.password.text}
       />
 
       <Button
@@ -57,7 +89,7 @@ export function UserData({
         variant="contained"
         color="primary"
       >
-        Cadastrar
+        Próximo
       </Button>
     </form>
   );

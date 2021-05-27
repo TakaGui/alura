@@ -4,28 +4,15 @@ import {
 } from '@material-ui/core';
 
 import { RegisterForm } from './components/RegisterForm';
+import { validCpf } from './models/validCpf';
+import { validPassword } from './models/validPassword';
 
 import 'fontsource-roboto';
 import './App.css';
 
-
 function App() {
   const onSubmitForm = (data) => {
     console.log(data);
-  }
-
-  const validCpf = (cpf) => {
-    if (cpf.length !== 11) {
-      return {
-        valid: false,
-        text: 'CPF deve ter 11 dígitos.',
-      };
-    } else {
-      return {
-        valid: true,
-        text: '',
-      };
-    }
   }
 
   return (
@@ -42,7 +29,10 @@ function App() {
       </Typography>
       <RegisterForm
         onSubmitForm={onSubmitForm}
-        validCpf={validCpf}
+        validations={{
+          cpf: validCpf,
+          password: validPassword
+        }}
       />
     </Container>
   );

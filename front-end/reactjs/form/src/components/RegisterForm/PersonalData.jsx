@@ -9,9 +9,9 @@ import {
 
 export function PersonalData({
   onSubmitForm,
-  validCpf,
+  validations,
 }) {
-  const [name, setName] = useState('');
+  const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [cpf, setCpf] = useState('');
   const [promotion, setPromotion] = useState(true);
@@ -23,36 +23,58 @@ export function PersonalData({
     },
   });
 
+  function validFields(event) {
+    const { name, value } = event.target;
+    const isValid = validations[name](value);
+    const newState = { ...errors };
+    newState[name] = isValid;
+    setErrors(newState);
+  }
+
+  function canSubmit() {
+    for (let field in errors) {
+      if (!errors[field].valid) {
+        return false;
+      }
+    }
+
+    return true;
+  }
+
   return (
     <form
       onSubmit={(event) => {
         event.preventDefault();
 
-        onSubmitForm({
-          name,
-          lastName,
-          cpf,
-          promotion,
-          news,
-        });
+        if (canSubmit()) {
+          onSubmitForm({
+            firstName,
+            lastName,
+            cpf,
+            promotion,
+            news,
+          });
+        }
       }}
     >
       <TextField
         id="name"
         label="Nome"
+        name="firstName"
         variant="outlined"
         required
         fullWidth
         margin="normal"
-        value={name}
+        value={firstName}
         onChange={(event) => {
-          setName(event.target.value);
+          setFirstName(event.target.value);
         }}
       />
 
       <TextField
         id="lastname"
         label="Sobrenome"
+        name="lastname"
         variant="outlined"
         required
         fullWidth
@@ -66,6 +88,7 @@ export function PersonalData({
       <TextField
         id="cpf"
         label="CPF"
+        name="cpf"
         variant="outlined"
         required
         fullWidth
@@ -74,10 +97,7 @@ export function PersonalData({
         onChange={(event) => {
           setCpf(event.target.value);
         }}
-        onBlur={(event) => {
-          const isValidCpf = validCpf(cpf);
-          setErrors({ cpf: isValidCpf });
-        }}
+        onBlur={validFields}
         error={!errors.cpf.valid}
         helperText={errors.cpf.text}
       />
@@ -115,7 +135,7 @@ export function PersonalData({
         variant="contained"
         color="primary"
       >
-        Cadastrar
+        Próximo
       </Button>
     </form>
   );
