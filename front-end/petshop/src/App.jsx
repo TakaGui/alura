@@ -9,6 +9,7 @@ import './assets/css/base/base.css';
 
 import { Home } from './pages/Home';
 import { About } from './pages/About';
+import { Page404 } from './pages/Page404';
 
 function App() {
   return (
@@ -20,6 +21,10 @@ function App() {
 
         <Route path="/sobre">
           <About />
+        </Route>
+
+        <Route>
+          <Page404 />
         </Route>
       </Switch>
     </BrowserRouter>

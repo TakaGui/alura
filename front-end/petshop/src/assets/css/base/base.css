@@ -8,7 +8,7 @@ body {
 	font-family: var(--fonte-familia-corpo);
 }
 
-.container { 
+.container {
 	padding-right: 1rem;
 	padding-left: 1rem;
 }
@@ -17,20 +17,20 @@ body {
 	display: flex;
 }
 
-.flex--centro {
+.flex--center {
 	align-items: center;
 	justify-content: center;
 }
 
-.flex--coluna {
+.flex--column {
 	flex-direction: column;
 }
 
-.titulo-pagina {
+.title-page {
 	display: flex;
 	align-items: center;
-	font-family: var(--fonte-familia-titulo-pagina);
-	font-size: var(--fonte-tamanho-titulo-pagina);
+	font-family: var(--fonte-familia-title-page);
+	font-size: var(--fonte-tamanho-title-page);
 	background-color: var(--cor-contraste-claro);
     border-radius: 10px;
 	box-shadow: var(--sombra);
@@ -43,7 +43,7 @@ body {
 @media(min-width: 800px) {
   .container {
 		padding-right: 2.5rem;
-		padding-left: 2.5rem;	
+		padding-left: 2.5rem;
 	}
 }
 
