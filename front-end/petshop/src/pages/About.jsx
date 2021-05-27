@@ -1,6 +1,6 @@
 import React from 'react'
 
-import '../assets/css/components/cartao.css'
+import '../assets/css/components/card.css'
 
 export const About = () => {
 
@@ -10,7 +10,7 @@ export const About = () => {
         <h2 className="title-page">Sobre Doguito</h2>
       </div>
       <section className="container flex flex--center">
-        <article className="cartao">
+        <article className="card">
           O blog do doguito foi criado para tirar diversas dúvidas sobre o mundo pet!!!
         </article>
 

@@ -12,12 +12,12 @@ export const Header = () => {
         </span>
       </div>
       <div className="header-container">
-        <a href="/" className="flex flex--center">
+        <Link to="/" className="flex flex--center">
           <img className="header__logo" src={doguitoLogo} alt="Logo Doguito" />
           <h1 className="header__title">
             PetShop
           </h1>
-        </a>
+        </Link>
       </div>
 
       <nav className="menu-header">

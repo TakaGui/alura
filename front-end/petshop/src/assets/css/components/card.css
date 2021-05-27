@@ -1,4 +1,4 @@
-.cartao {
+.card {
     background-color: var(--cor-contraste-claro);
     border-radius: 10px;
     box-shadow: var(--sombra);
@@ -9,16 +9,16 @@
     margin-bottom: 1rem;
 }
 
-.cartao__title {
-    font-size: var(--fonte-tamanho-cartao-titulo);
+.card__title {
+    font-size: var(--fonte-tamanho-card-titulo);
     margin-bottom: 1rem;
 }
 
-.cartao__texto {
+.card__texto {
     line-height: 1.2rem;
 }
 
-.cartao-post {
+.card-post {
     background-color: var(--cor-contraste-claro);
     border-radius: 10px;
     box-shadow: var(--sombra);
@@ -30,21 +30,21 @@
     border-top: 1rem solid;
 }
 
-.cartao-post__title {
-    font-size: var(--fonte-tamanho-cartao-post-titulo);
-    font-weight: var(--fonte-peso-cartao);
+.card-post__title {
+    font-size: var(--fonte-tamanho-card-post-titulo);
+    font-weight: var(--fonte-peso-card);
     margin-bottom: 1rem;
 }
 
-.cartao-post__meta {
+.card-post__meta {
     line-height: 1.3rem;
 }
 
-.cartao-post--bem-estar {
+.card-post--bem-estar {
     border-color: var(--cor-categoria-bem-estar);
 }
 
-.cartao-post--comportamento {
+.card-post--comportamento {
     border-color: var(--cor-categoria-comportamento);
 }
 
