@@ -3,6 +3,8 @@ import {
   Typography,
 } from '@material-ui/core';
 
+import { FormValidation } from './contexts/FormValidations';
+
 import { RegisterForm } from './components/RegisterForm';
 import { validCpf } from './models/validCpf';
 import { validPassword } from './models/validPassword';
@@ -27,13 +29,15 @@ function App() {
       >
         Formulário de cadastro
       </Typography>
-      <RegisterForm
-        onSubmitForm={onSubmitForm}
-        validations={{
-          cpf: validCpf,
-          password: validPassword
-        }}
-      />
+
+      <FormValidation.Provider value={{
+        cpf: validCpf,
+        password: validPassword
+      }}>
+        <RegisterForm
+          onSubmitForm={onSubmitForm}
+        />
+      </FormValidation.Provider>
     </Container>
   );
 }

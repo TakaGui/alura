@@ -16,7 +16,6 @@ import { AddressData } from './AddressData';
 
 export function RegisterForm({
   onSubmitForm,
-  validations,
 }) {
   const [stage, setStage] = useState(0);
   const [formData, setFormData] = useState({});
@@ -39,15 +38,12 @@ export function RegisterForm({
   const forms = [
     <UserData
       onSubmitForm={getData}
-      validations={validations}
     />,
     <PersonalData
       onSubmitForm={getData}
-      validations={validations}
     />,
     <AddressData
       onSubmitForm={getData}
-      validations={validations}
     />,
     <Typography
       variant="h5"

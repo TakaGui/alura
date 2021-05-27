@@ -1,4 +1,7 @@
-import { useState } from 'react';
+import {
+  useState,
+  useContext,
+} from 'react';
 
 import {
   TextField,
@@ -7,9 +10,10 @@ import {
   Button,
 } from '@material-ui/core';
 
+import { FormValidation } from '../../contexts/FormValidations';
+
 export function PersonalData({
   onSubmitForm,
-  validations,
 }) {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
@@ -22,6 +26,8 @@ export function PersonalData({
       text: '',
     },
   });
+
+  const validations = useContext(FormValidation);
 
   function validFields(event) {
     const { name, value } = event.target;

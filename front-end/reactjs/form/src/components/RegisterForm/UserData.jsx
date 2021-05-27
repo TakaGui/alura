@@ -1,5 +1,6 @@
 import {
   useState,
+  useContext,
 } from 'react';
 
 import {
@@ -7,9 +8,10 @@ import {
   Button,
 } from '@material-ui/core';
 
+import { FormValidation } from '../../contexts/FormValidations';
+
 export function UserData({
   onSubmitForm,
-  validations,
 }) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -19,6 +21,8 @@ export function UserData({
       text: '',
     },
   });
+
+  const validations = useContext(FormValidation);
 
   function validFields(event) {
     const { name, value } = event.target;
