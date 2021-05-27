@@ -9,7 +9,7 @@ export const Home = () => {
       </div>
       <section className="container flex flex--center">
       <article className="cartao post">
-        <h2 className="cartao__titulo">Banho no cão</h2>
+        <h2 className="cartao__title">Banho no cão</h2>
         <p className="cartao__texto">A maioria dos cães prefere pular a hora do banho, mas o banho desempenha um papel importante na saúde do pelo e da pele do seu cão, ajudando a mantê-lo limpo e livre de sujeira e parasitas. Ter os produtos certos pode ajudá-lo a se sentir mais confortável.</p>
       </article>
     </section>

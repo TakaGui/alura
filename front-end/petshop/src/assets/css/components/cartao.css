@@ -9,7 +9,7 @@
     margin-bottom: 1rem;
 }
 
-.cartao__titulo {
+.cartao__title {
     font-size: var(--fonte-tamanho-cartao-titulo);
     margin-bottom: 1rem;
 }
@@ -30,7 +30,7 @@
     border-top: 1rem solid;
 }
 
-.cartao-post__titulo {
+.cartao-post__title {
     font-size: var(--fonte-tamanho-cartao-post-titulo);
     font-weight: var(--fonte-peso-cartao);
     margin-bottom: 1rem;

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import '../assets/css/componentes/cartao.css'
+import '../assets/css/components/cartao.css'
 
 export const About = () => {
 

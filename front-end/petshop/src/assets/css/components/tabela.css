@@ -21,7 +21,7 @@
 }
 
 .tabela thead {
-    font-size: var(--fonte-tamanho-tabela-cabecalho);
+    font-size: var(--fonte-tamanho-tabela-header);
 }
 
 .tabela th {

@@ -7,6 +7,7 @@ import {
 
 import './assets/css/base/base.css';
 
+import { Header } from './components/Header';
 import { Home } from './pages/Home';
 import { About } from './pages/About';
 import { Page404 } from './pages/Page404';
@@ -14,6 +15,7 @@ import { Page404 } from './pages/Page404';
 function App() {
   return (
     <BrowserRouter>
+      <Header />
       <Switch>
         <Route path="/" exact>
           <Home />
