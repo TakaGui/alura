@@ -1,16 +1,29 @@
 import {
+  useState,
+  useEffect,
+} from 'react';
+import {
   Route,
   useParams,
   useRouteMatch,
 } from 'react-router-dom';
+import { search } from '../api';
 
 import '../assets/css/blog.css';
 import { CategoriesList } from '../components/CategoriesList';
 import { PostList } from '../components/PostList';
 
 export const Category = () => {
+  const [subcategory, setSubcategory] = useState([]);
+
   const { id } = useParams();
   const { path } = useRouteMatch();
+
+  useEffect(() => {
+    search(`/categories/${id}`, (category) => {
+      setSubcategory(category.subcategories);
+    });
+  }, [id]);
 
   return(
       <>
