@@ -13,7 +13,6 @@ export const About = () => {
         <article className="card">
           O blog do doguito foi criado para tirar diversas dúvidas sobre o mundo pet!!!
         </article>
-
       </section>
     </main>
   )

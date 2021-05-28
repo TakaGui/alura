@@ -17,8 +17,12 @@ export const PostList = ({ url }) => {
     <section className="posts container">
       {
         posts.map((post) => (
-          <Link className={`card-post card-post--${post.category}`} to="#">
-            <article key={post.id}>
+          <Link
+            className={`card-post card-post--${post.category}`}
+            key={post.id}
+            to={`/posts/${post.id}`}
+          >
+            <article>
               <h3 className="card-post__title">
                 {post.title}
               </h3>
