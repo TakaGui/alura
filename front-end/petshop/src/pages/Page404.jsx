@@ -1,5 +1,3 @@
-import React from 'react';
-
 import doguito404 from '../assets/img/doguito404.svg';
 import '../assets/css/404.css';
 
@@ -11,5 +9,5 @@ export const Page404 = () => {
         Ops, Essa página não existe!
       </p>
     </main>
-  )
+  );
 }

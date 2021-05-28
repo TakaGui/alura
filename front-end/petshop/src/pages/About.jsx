@@ -1,9 +1,6 @@
-import React from 'react'
-
-import '../assets/css/components/card.css'
+import '../assets/css/components/card.css';
 
 export const About = () => {
-
   return (
     <main>
       <div className="container">
@@ -15,5 +12,5 @@ export const About = () => {
         </article>
       </section>
     </main>
-  )
+  );
 }

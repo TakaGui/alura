@@ -1,4 +1,3 @@
-import React from 'react';
 import {
   BrowserRouter,
   Route,
@@ -35,7 +34,7 @@ function App() {
         </Route>
       </Switch>
     </BrowserRouter>
-  )
+  );
 }
 
-export default App
+export default App;
