@@ -21,7 +21,7 @@ export const CategoriesList = ({ url }) => {
         categories.map((category) => (
           <Link
             key={category.id}
-            to={`categoria/${category.id}`}
+            to={`/categoria/${category.id}`}
           >
             <li className={`categories-list__category categories-list__category--${category.id}`}>
               {category.name}
