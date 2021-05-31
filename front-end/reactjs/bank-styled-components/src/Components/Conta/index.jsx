@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import {
   Box,
   Icone,
+  IconeTema,
   Botao,
   Saldo,
   Detalhe,
@@ -30,7 +31,7 @@ const Conta = () => {
       <div style={{ fontSize: "26px", padding: "20px 0" }}>
         Saldo disponível{" "}
         <span>
-          <Icone src={dinheiro} alt="Ícone Saldo" />
+          <IconeTema src={dinheiro} alt="Ícone Saldo" />
         </span>
         {toggleState ? (
           <Saldo>
